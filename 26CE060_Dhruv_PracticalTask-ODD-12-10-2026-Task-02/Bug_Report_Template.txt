@@ -1,0 +1,34 @@
+ITUS102 - PRACTICAL EXAMINATION | DEBUGGING AND IMPLEMENTATION REPORT
+Date: 12-10-2026 | Task 02 - Campus Canteen Order Calculator
+
+Enrollment No.:26CE060
+Name:Dhruv N. Patel
+
+SIMPLE BUGS (write a brief explanation for each)
+Bug | Original problem | Correction made | Why required
+S1  | Navigation target was misspelled (#calcuator). | Changed it to #calculator. | The link now targets the calculator section ID.
+S2  | Site information used a generic <div>. | Changed <div class="site-footer"> to <footer class="site-footer">. | <footer> is the semantic HTML5 element for footer information.
+S3  | The background-color declaration lacked a colon. | Changed it to background-color: #f1f6f9;. | CSS property declarations require a colon between property and value.
+S4  | .pageTitle selected a class that the heading does not have. | Changed the selector to #pageTitle. | The HTML heading uses id="pageTitle".
+S5  | Subtotal added unit price and quantity. | Changed + to *. | Subtotal is unit price multiplied by quantity.
+S6  | Service charge was 15% of subtotal. | Changed 0.15 to 0.05. | The required service charge is 5% of subtotal.
+
+CODE COMPLETION / IMPLEMENTATION (briefly state what was completed)
+M1: Added UTF-8 charset and responsive viewport metadata.
+M2: Added a semantic aside with the heading "Important Note" and a reminder to check inputs.
+M3: Used Flexbox and justify-content: space-between for horizontal navigation.
+M4: Used CSS Grid with two equal-width columns for the cards.
+M5: At widths of 600px or less, cards stack in one column and navigation becomes vertical.
+M6: Implemented discount as amount * percentage / 100.
+D1: Implemented getRate with Student = 10%, Staff = 5%, and Visitor = 0%.
+D2: Implemented total as subtotal - discount + service charge.
+D3: Used a for loop to show the running cost after each item.
+
+FUNCTIONAL TEST
+Test input: Price ₹100; quantity 3; customer type Student.
+Observed result: Subtotal ₹300; discount ₹30; service charge ₹15; payable ₹285; running cost after item 1 = ₹100, item 2 = ₹200, item 3 = ₹300.
+Mobile layout checked (Yes/No): Yes
+
+GIT VERSION CONTROL
+git log -1 --oneline output: f47bfb0 Record final verification details
+GitHub URL (if available):https://github.com/cedhruvpatel/ITUS-26CE060
